@@ -5,14 +5,25 @@
 
 Database::Database()
 {
-    std::cout << std::endl << Color::GREEN;
-    std::cout << " Connected to PostgreSQL: " << this->_conn.dbname() << std::endl;
-    std::cout << Color::RESET << std::endl;
+	try
+	{
+		std::cout << std::endl;
+		this->_conn = new pqxx::connection{"postgresql://fady@localhost/jojo?connect_timeout=10"};
+		std::cout << Color::GREEN << " Connected to PostgreSQL: " << this->_conn->dbname() << std::endl;
+		
+	}
+	catch(const pqxx::broken_connection& e)
+	{
+		std::cout << Color::RED << " Failed to connect to PostgreSQL" << std::endl;
+		this->_conn = NULL;
+	}
+	std::cout << Color::RESET << std::endl;
 }
 
 Database::~Database()
 {
-
+	if(this->_conn != NULL)
+		delete this->_conn;
 }
 
 std::string Database::getPasswordSN(const char* serial_number)
@@ -22,19 +33,23 @@ std::string Database::getPasswordSN(const char* serial_number)
 
 JSONB Database::getPasswordIP(const char* ip)
 {
-    pqxx::work txn{this->_conn};
-    pqxx::result r{txn.exec("SELECT PASSWORDS "
-                            "FROM SCAN_HISTORY "
-                            "WHERE PASSWORDS IS NOT NULL AND "
-                            "IP_ADDRESS = TRIM(" + txn.quote(ip) + ") " +
-                            "ORDER BY DATETIME DESC;")};
-    JSONB res;
-
-    for (auto row: r)
-    {
-        res.parse(row["PASSWORDS"].c_str());
-    }
-    
-    r.clear();
+	JSONB res;
+	if(this->_conn != NULL)
+	{
+		pqxx::work txn{*this->_conn};
+		pqxx::result r{txn.exec("SELECT PASSWORDS "
+								"FROM SCAN_HISTORY "
+								"WHERE PASSWORDS IS NOT NULL AND "
+								"IP_ADDRESS = TRIM(" + txn.quote(ip) + ") " +
+								"ORDER BY DATETIME DESC;")};
+		
+	
+		for (auto row: r)
+		{
+			res.parse(row["PASSWORDS"].c_str());
+		}
+		
+		r.clear();
+	}
     return res;
 }

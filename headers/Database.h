@@ -14,6 +14,6 @@ class Database
         std::string getPasswordSN(const char*); 
         JSONB getPasswordIP(const char*);
     private:
-        pqxx::connection _conn {"postgresql://fady@localhost/jojo?connect_timeout=10"};
+        pqxx::connection* _conn = NULL;
 };
 #endif
