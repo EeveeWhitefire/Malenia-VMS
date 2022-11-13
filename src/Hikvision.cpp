@@ -104,7 +104,19 @@ namespace Hikvision
             return 1;
         }
         else
-            MaleniaException::show(LOGIN_RET_INVALID_CREDENTIALS);
+        {
+            switch(NET_DVR_GetLastError())
+            {
+                case NET_DVR_PASSWORD_ERROR:
+                    MaleniaException::show(LOGIN_RET_INVALID_CREDENTIALS);
+                    break;
+                case NET_DVR_NETWORK_FAIL_CONNECT:
+                    MaleniaException::show(LOGIN_RET_TIMEOUT);
+                    break;
+                default:
+                    MaleniaException::show(LOGIN_RET_UNKNOWN, std::to_string(NET_DVR_GetLastError()).c_str());
+            }
+        }
 
         return 0;
     }
@@ -163,7 +175,7 @@ namespace Hikvision
         this->_handle = NET_DVR_RealPlay_V40(this->_userId, &liveRequestIn, NULL, NULL);
         if (this->_handle < 0)
         {
-            QMessageBox::information(NULL, QObject::tr("NET_DVR_RealPlay_V40 error"), QObject::tr("error code : %1").arg(NET_DVR_GetLastError()));
+            QMessageBox::information(NULL, QObject::tr("NET_DVR_RealPlay_V40 error"), QObject::tr("error code %1").arg(NET_DVR_GetLastError()));
             return 0;
         }
         
