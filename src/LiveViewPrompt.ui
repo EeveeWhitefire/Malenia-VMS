@@ -61,7 +61,8 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(171, 141, 21);</string>
+     <string notr="true">background-color: rgb(171, 141, 21);
+color: rgb(45,45,45);</string>
     </property>
     <property name="text">
      <string>CONFIRM</string>
