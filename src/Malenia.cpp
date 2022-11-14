@@ -57,8 +57,10 @@ Malenia::Malenia(QWidget *parent): QMainWindow(parent)
     changeVendor(0); // HIKVISION
 
     // HIKVISION SDK
-    NET_DVR_Init();
-    NET_DVR_SetConnectTime(10000, 1);
+    if(!NET_DVR_Init())
+        MaleniaException::show(ERR_UNKNOWN, ("Hikvision SDK failed to load: " + std::to_string(NET_DVR_GetLastError())).c_str());
+    else
+        NET_DVR_SetConnectTime(10000, 1);
 
     // DAHUA SDK
     CLIENT_Init(NULL, NULL);

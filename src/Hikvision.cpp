@@ -175,7 +175,15 @@ namespace Hikvision
         this->_handle = NET_DVR_RealPlay_V40(this->_userId, &liveRequestIn, NULL, NULL);
         if (this->_handle < 0)
         {
-            QMessageBox::information(NULL, QObject::tr("NET_DVR_RealPlay_V40 error"), QObject::tr("error code %1").arg(NET_DVR_GetLastError()));
+            switch(NET_DVR_GetLastError())
+            {
+                case NET_DVR_LOADPLAYERSDKFAILED:
+                    MaleniaException::show(ERR_UNKNOWN, "Failed to load SDK");
+                    break;
+                default:
+                    MaleniaException::show(ERR_UNKNOWN, std::to_string(NET_DVR_GetLastError()).c_str());
+                    break;
+            }
             return 0;
         }
         
