@@ -411,7 +411,7 @@ inline datetime calc_datetime_offset(datetime original, datetime offset)
     result.seconds -= offset.seconds;
     if(result.seconds < 0)
     {
-        result.minutes -= - 1;
+        result.minutes -= 1;
         result.seconds += 60;
     }
 
@@ -426,7 +426,7 @@ inline datetime calc_datetime_offset(datetime original, datetime offset)
     if(result.hours < 0)
     {
         result.day -= 1;
-        result.hours += 60;
+        result.hours += 24;
     }
 
     result.day -= offset.day;
