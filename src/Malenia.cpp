@@ -66,6 +66,7 @@ Malenia::Malenia(QWidget *parent): QMainWindow(parent)
     CLIENT_Init(NULL, NULL);
     
     // this plays when the process starts
+    this->_audioOutput.setVolume(50);
     this->_player.setSource(QUrl::fromLocalFile("./assets/malenia-intro.mp3"));
     this->_player.setAudioOutput(&this->_audioOutput);
     this->_player.play();

@@ -217,6 +217,7 @@ namespace Hikvision
     int SDK_PlaybackStream::Start(QFrame* qframe)
     {
         NET_DVR_VOD_PARA playbackRequestIn;
+        datetime from = calc_datetime_offset(this->_from, this->_dtOffset), to = calc_datetime_offset(this->_to, this->_dtOffset);
 
         // initiating the struct with zeros
         memset(&playbackRequestIn, 0, sizeof(NET_DVR_VOD_PARA));
@@ -225,19 +226,23 @@ namespace Hikvision
         playbackRequestIn.struIDInfo.dwChannel = this->_chid;
         playbackRequestIn.byStreamType = 0; // Stream type: 0-main stream, 1-sub-stream, 2-third stream. This parameter is not supported by ISAPI protocol.
         
-        playbackRequestIn.struBeginTime.dwYear = this->_from.year - this->_dtOffset.year;
-        playbackRequestIn.struBeginTime.dwMonth = this->_from.month - this->_dtOffset.month;
-        playbackRequestIn.struBeginTime.dwDay = this->_from.day - this->_dtOffset.day;
-        playbackRequestIn.struBeginTime.dwHour = this->_from.hours - this->_dtOffset.hours;
-        playbackRequestIn.struBeginTime.dwMinute = this->_from.minutes - this->_dtOffset.minutes;
-        playbackRequestIn.struBeginTime.dwSecond = this->_from.seconds - this->_dtOffset.seconds;
+        playbackRequestIn.struBeginTime.dwYear = from.year;
+        playbackRequestIn.struBeginTime.dwMonth = from.month;
+        playbackRequestIn.struBeginTime.dwDay = from.day;
+        playbackRequestIn.struBeginTime.dwHour = from.hours;
+        playbackRequestIn.struBeginTime.dwMinute = from.minutes;
+        playbackRequestIn.struBeginTime.dwSecond = from.seconds;
 
-        playbackRequestIn.struEndTime.dwYear = this->_to.year - this->_dtOffset.year;
-        playbackRequestIn.struEndTime.dwMonth = this->_to.month - this->_dtOffset.month;
-        playbackRequestIn.struEndTime.dwDay = this->_to.day - this->_dtOffset.day;
-        playbackRequestIn.struEndTime.dwHour = this->_to.hours - this->_dtOffset.hours;
-        playbackRequestIn.struEndTime.dwMinute = this->_to.minutes - this->_dtOffset.minutes;
-        playbackRequestIn.struEndTime.dwSecond = this->_to.seconds - this->_dtOffset.seconds;
+        playbackRequestIn.struEndTime.dwYear = to.year;
+        playbackRequestIn.struEndTime.dwMonth = to.month;
+        playbackRequestIn.struEndTime.dwDay = to.day;
+        playbackRequestIn.struEndTime.dwHour = to.hours;
+        playbackRequestIn.struEndTime.dwMinute = to.minutes;
+        playbackRequestIn.struEndTime.dwSecond = to.seconds;
+        qDebug("%d %d %d %d %d %d", playbackRequestIn.struBeginTime.dwYear, playbackRequestIn.struBeginTime.dwMonth, playbackRequestIn.struBeginTime.dwDay,
+                                    playbackRequestIn.struBeginTime.dwHour, playbackRequestIn.struBeginTime.dwMinute, playbackRequestIn.struBeginTime.dwSecond);
+        qDebug("%d %d %d %d %d %d", playbackRequestIn.struEndTime.dwYear, playbackRequestIn.struEndTime.dwMonth, playbackRequestIn.struEndTime.dwDay,
+                                    playbackRequestIn.struEndTime.dwHour, playbackRequestIn.struEndTime.dwMinute, playbackRequestIn.struEndTime.dwSecond);
 
         this->_handle = NET_DVR_PlayBackByTime_V40(this->_userId, &playbackRequestIn);
         if(this->_handle < 0)

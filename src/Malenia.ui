@@ -1523,7 +1523,8 @@ PASSWORD</string>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(74, 74, 74);</string>
+      <string notr="true">background-color: rgb(74, 74, 74);
+QTreeWidgetItem{ color: rgb(234, 234, 234);}</string>
      </property>
      <column>
       <property name="text">

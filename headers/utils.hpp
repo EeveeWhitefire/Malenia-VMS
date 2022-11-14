@@ -397,4 +397,54 @@ inline void trim(std::string& s)
     rtrim(s);
     ltrim(s);
 }
+
+inline datetime calc_datetime_offset(datetime original, datetime offset)
+{
+    datetime result;
+    result.year = original.year;
+    result.month = original.month;
+    result.day = original.day;
+    result.hours = original.hours;
+    result.minutes = original.minutes;
+    result.seconds = original.seconds;
+
+    result.seconds -= offset.seconds;
+    if(result.seconds < 0)
+    {
+        result.minutes -= - 1;
+        result.seconds += 60;
+    }
+
+    result.minutes -= offset.minutes;
+    if(result.minutes < 0)
+    {
+        result.hours -= 1;
+        result.minutes += 60;
+    }
+
+    result.hours -= offset.hours;
+    if(result.hours < 0)
+    {
+        result.day -= 1;
+        result.hours += 60;
+    }
+
+    result.day -= offset.day;
+    if(result.day < 0)
+    {
+        result.month -= 1;
+        result.day += 30;
+    }
+
+    result.month -= offset.month;
+    if(result.month < 0)
+    {
+        result.year -= 1;
+        result.month += 12;
+    }
+
+    result.year -= offset.year;
+    
+    return result;
+}
 #endif
