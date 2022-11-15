@@ -254,7 +254,18 @@ namespace Dahua
             switch(CLIENT_GetLastError())
             {
                 case NET_ILLEGAL_PARAM:
-                    MaleniaException::show(ERR_INVALID_INPUT);
+                    MaleniaException::show(ERR_INVALID_INPUT, 
+                                           QObject::tr("Invalid range %1:%2 %3/%4/%5 - %6:%7 %8/%9/%10").arg(this->_from.hours)
+                                                                                                        .arg(this->_from.minutes)
+                                                                                                        .arg(this->_from.day)
+                                                                                                        .arg(this->_from.month)
+                                                                                                        .arg(this->_from.year)
+                                                                                                        .arg(this->_to.hours)
+                                                                                                        .arg(this->_to.minutes)
+                                                                                                        .arg(this->_to.day)
+                                                                                                        .arg(this->_to.month)
+                                                                                                        .arg(this->_to.year)
+                                                                                                        .toLocal8Bit().data());
                     break;
                 case NET_NOT_SAVING:
                     MaleniaException::show(ERR_PLAYBACK_NOT_EXIST);
