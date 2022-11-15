@@ -248,7 +248,18 @@ namespace Hikvision
             switch(NET_DVR_GetLastError())
             {
                 case NET_DVR_PARAMETER_ERROR:
-                    MaleniaException::show(ERR_INVALID_INPUT);
+                    MaleniaException::show(ERR_INVALID_INPUT, 
+                                           QObject::tr("Invalid range %1:%2 %3/%4/%5 - %6:%7 %8/%9/%10").arg(this->_from.hours)
+                                                                                                        .arg(this->_from.minutes)
+                                                                                                        .arg(this->_from.day)
+                                                                                                        .arg(this->_from.month)
+                                                                                                        .arg(this->_from.year)
+                                                                                                        .arg(this->_to.hours)
+                                                                                                        .arg(this->_to.minutes)
+                                                                                                        .arg(this->_to.day)
+                                                                                                        .arg(this->_to.month)
+                                                                                                        .arg(this->_to.year)
+                                                                                                        .toLocal8Bit().data());
                     break;
                 default:
                     QMessageBox::information(NULL, QObject::tr("NET_DVR_PlayBackByTime_V40 error"), QObject::tr("error code : %1").arg(NET_DVR_GetLastError()));
