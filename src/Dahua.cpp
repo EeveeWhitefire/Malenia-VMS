@@ -112,7 +112,7 @@ namespace Dahua
         channelsRequestIn.stuVideoIn.dwSize = sizeof(channelsRequestIn.stuVideoIn);
         channelsRequestIn.stuVideoOut.dwSize = sizeof(channelsRequestIn.stuVideoOut);
         if(CLIENT_QueryDevState(this->_userId, DH_DEVSTATE_DEV_CHN_COUNT, (char*)&channelsRequestIn, channelsRequestIn.dwSize, &i)) // getting number of channels
-            this->_channelsAmount = channelsRequestIn.stuVideoIn.nMaxTotal;
+            this->_channelsAmount = channelsRequestIn.stuVideoOut.nMaxTotal;
         else
             this->_channelsAmount = loginRequestOut.stuDeviceInfo.nChanNum;
 
@@ -172,11 +172,23 @@ namespace Dahua
         PLAY_OpenStream(this->_streamingPort, NULL, 0, 900*1024);
         PLAY_Play(this->_streamingPort, (void*)qframe->winId()); // for some reason dahua wants a void*
                                      
-        this->_handle = CLIENT_StartRealPlay(this->_userId, this->_chid, NULL, DH_RType_Realplay, // DH_RType_Realplay - main stream, DH_RType_Realplay_1 - sub stream 1
+        this->_handle = CLIENT_StartRealPlay(this->_userId, this->_chid, NULL, DH_RType_Realplay_1, // DH_RType_Realplay - main stream, DH_RType_Realplay_1 - sub stream 1
                                              LiveCallback, NULL, (LDWORD)this->_streamingPort);
         if (this->_handle == 0)
         {
-            QMessageBox::information(NULL, QObject::tr("CLIENT_RealPlay error"), QObject::tr("error code : %1").arg(CLIENT_GetLastError()));
+            switch(CLIENT_GetLastError())
+            {
+                case NET_NETWORK_ERROR:
+                    MaleniaException::show(ERR_NETWORK_ERROR, "A protocol error has occured. It may result from network timeout");
+                    break;
+                case NET_ERROR_GETCFG_SESSION:
+                    MaleniaException::show(ERR_NETWORK_ERROR, "Failed to get connection session information");
+                    break;
+                default:
+                    MaleniaException::show(ERR_UNKNOWN, std::to_string(CLIENT_GetLastError()).c_str());
+                    break;
+            }
+
             return 0;
         }
 
@@ -245,6 +257,9 @@ namespace Dahua
                     MaleniaException::show(ERR_INVALID_INPUT);
                     break;
                 case NET_NOT_SAVING:
+                    MaleniaException::show(ERR_PLAYBACK_NOT_EXIST);
+                    break;
+                case NET_NO_RECORD_FOUND:
                     MaleniaException::show(ERR_PLAYBACK_NOT_EXIST);
                     break;
                 default:

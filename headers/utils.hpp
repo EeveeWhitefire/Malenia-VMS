@@ -231,7 +231,7 @@ class JSONB
 
 enum ERROR_CODES {LOGIN_RET_PING_FAILED, LOGIN_RET_INVALID_USERNAME, LOGIN_RET_INVALID_CREDENTIALS, LOGIN_RET_LOCKED, LOGIN_RET_TIMEOUT, LOGIN_RET_DEVICE_BUSY, LOGIN_RET_MAX_CONNECTIONS, 
                   LOGIN_RET_UNKNOWN, ERR_NO_FREE_FRAMES, ERR_INVALID_SN, ERR_INVALID_INPUT, ERR_PLAYBACK_NOT_EXIST, ERR_AUTOCOMPLETE_PARAM_MISSING_IP, ERR_AUTOCOMPLETE_NOT_FOUND,
-                  ERR_NO_CHANNELS_FOUND, ERR_UNKNOWN};
+                  ERR_NO_CHANNELS_FOUND, ERR_UNKNOWN, ERR_NETWORK_ERROR};
 
 class MaleniaException {
     public:
@@ -289,6 +289,9 @@ class MaleniaException {
                         break;
                     case ERR_UNKNOWN:
                         msg = (char*)"Unknown error";
+                        break;
+                    case ERR_NETWORK_ERROR:
+                        msg = (char*)"A network error has occurred, try again";
                         break;
                     default:
                         msg = (char*)"Unknown error";
