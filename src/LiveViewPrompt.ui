@@ -6,9 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>271</width>
+    <width>281</width>
     <height>211</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>281</width>
+    <height>211</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>281</width>
+    <height>211</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Live View</string>
@@ -30,13 +42,13 @@
      <rect>
       <x>20</x>
       <y>20</y>
-      <width>121</width>
+      <width>181</width>
       <height>21</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
+      <pointsize>16</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -79,7 +91,7 @@ color: rgb(45,45,45);</string>
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
+      <pointsize>16</pointsize>
      </font>
     </property>
     <property name="styleSheet">

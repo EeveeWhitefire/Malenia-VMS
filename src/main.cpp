@@ -27,7 +27,9 @@ int main(int argc, char** argv)
     std::cout << " As I awaited... his return.... Heed my words. I am Malenia. Blade of Miquella. And I have never known defeat." << std::endl;
     std::cout << Color::RESET << std::endl;
     std::cout << std::endl;
-
+    
+    
+    // win.setWindowState(Qt::WindowMaximized);
     win.show();
     return app.exec();
 }

@@ -30,6 +30,8 @@ IDevice::IDevice(const char* ip, int port) : QTreeWidgetItem()
 
     this->setText(0, ip);
     this->setText(1, QString::number(port));
+    this->setForeground(0, QBrush(QColor(234, 234, 234)));
+    this->setForeground(1, QBrush(QColor(234, 234, 234)));
 }
 
 IDevice::~IDevice()

@@ -48,7 +48,7 @@ Malenia::Malenia(QWidget *parent): QMainWindow(parent)
 
     ui.portInput->setValidator(new QIntValidator(1, 65535, this)); // port is a number between 1 and 65,535
     ui.treeWidget->setContextMenuPolicy(Qt::CustomContextMenu); // allowing me to have a custom right-click menu
-    ui.treeWidget->header()->resizeSection(0, 180); // so the IP header of the devices tab will be bigger
+    ui.treeWidget->header()->resizeSection(0, 190); // so the IP header of the devices tab will be bigger
     connect(ui.treeWidget, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(connectionRightClick(QPoint))); //hooking the devices right click event
     connect(ui.treeWidget, SIGNAL(itemDoubleClicked(QTreeWidgetItem*, int)), this, SLOT(connectionDoubleClick(QTreeWidgetItem*, int))); // hooking the devices double click event
 
@@ -359,6 +359,13 @@ void Malenia::mousePressEvent(QMouseEvent* e)
     }
 
     QMainWindow::mousePressEvent(e);
+}
+
+void Malenia::resizeEvent(QResizeEvent* e)
+{
+    qDebug("%d %d", e->size().width(), e->size().height());
+
+    QMainWindow::resizeEvent(e);
 }
 
 void Malenia::launchLiveView()

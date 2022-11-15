@@ -6,9 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>271</width>
+    <width>281</width>
     <height>381</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>281</width>
+    <height>381</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>281</width>
+    <height>381</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Playback</string>
@@ -18,7 +30,7 @@
     <rect>
      <x>10</x>
      <y>10</y>
-     <width>251</width>
+     <width>261</width>
      <height>361</height>
     </rect>
    </property>
@@ -30,13 +42,13 @@
      <rect>
       <x>20</x>
       <y>20</y>
-      <width>121</width>
+      <width>171</width>
       <height>21</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
+      <pointsize>16</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -57,7 +69,7 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
+      <pointsize>16</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -78,7 +90,7 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
+      <pointsize>16</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -93,13 +105,13 @@
      <rect>
       <x>20</x>
       <y>220</y>
-      <width>211</width>
+      <width>231</width>
       <height>35</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
+      <pointsize>16</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -114,13 +126,13 @@
      <rect>
       <x>20</x>
       <y>140</y>
-      <width>211</width>
+      <width>231</width>
       <height>35</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
+      <pointsize>16</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -163,7 +175,7 @@ color: rgb(45,45,45);</string>
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
+      <pointsize>16</pointsize>
      </font>
     </property>
     <property name="styleSheet">

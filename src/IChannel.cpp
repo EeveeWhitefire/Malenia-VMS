@@ -5,6 +5,8 @@ IChannel::IChannel(int chid, QTreeWidgetItem* parent) : QTreeWidgetItem(parent)
 {
     this->_chid = chid;
     this->_dtOffset = ((IDevice*)parent)->getDatetimeOffset();
+    this->setForeground(0, QBrush(QColor(234, 234, 234)));
+    this->setForeground(1, QBrush(QColor(234, 234, 234)));
 }
 
 IChannel::~IChannel()

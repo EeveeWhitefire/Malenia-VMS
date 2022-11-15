@@ -6,20 +6,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>2261</width>
-    <height>1241</height>
+    <width>2900</width>
+    <height>1600</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>2261</width>
-    <height>1241</height>
+    <width>2900</width>
+    <height>1600</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>2261</width>
-    <height>1241</height>
+    <width>2900</width>
+    <height>1600</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -34,8 +34,8 @@
      <rect>
       <x>310</x>
       <y>130</y>
-      <width>1941</width>
-      <height>1101</height>
+      <width>2580</width>
+      <height>1460</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -46,8 +46,8 @@
       <rect>
        <x>10</x>
        <y>10</y>
-       <width>480</width>
-       <height>270</height>
+       <width>640</width>
+       <height>360</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -76,7 +76,7 @@
       </property>
       <property name="font">
        <font>
-        <pointsize>16</pointsize>
+        <pointsize>18</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -90,8 +90,8 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>240</y>
-        <width>111</width>
+        <y>330</y>
+        <width>131</width>
         <height>22</height>
        </rect>
       </property>
@@ -111,10 +111,10 @@
     <widget class="QFrame" name="frame_4">
      <property name="geometry">
       <rect>
-       <x>1450</x>
+       <x>1930</x>
        <y>10</y>
-       <width>480</width>
-       <height>270</height>
+       <width>640</width>
+       <height>360</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -140,7 +140,7 @@
       </property>
       <property name="font">
        <font>
-        <pointsize>16</pointsize>
+        <pointsize>18</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -154,7 +154,7 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>240</y>
+        <y>330</y>
         <width>111</width>
         <height>22</height>
        </rect>
@@ -175,10 +175,10 @@
     <widget class="QFrame" name="frame_2">
      <property name="geometry">
       <rect>
-       <x>490</x>
+       <x>650</x>
        <y>10</y>
-       <width>480</width>
-       <height>270</height>
+       <width>640</width>
+       <height>360</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -204,7 +204,7 @@
       </property>
       <property name="font">
        <font>
-        <pointsize>16</pointsize>
+        <pointsize>18</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -218,7 +218,7 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>240</y>
+        <y>330</y>
         <width>111</width>
         <height>22</height>
        </rect>
@@ -240,9 +240,9 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>280</y>
-       <width>480</width>
-       <height>270</height>
+       <y>370</y>
+       <width>640</width>
+       <height>360</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -268,7 +268,7 @@
       </property>
       <property name="font">
        <font>
-        <pointsize>16</pointsize>
+        <pointsize>18</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -282,7 +282,7 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>240</y>
+        <y>330</y>
         <width>111</width>
         <height>22</height>
        </rect>
@@ -303,10 +303,10 @@
     <widget class="QFrame" name="frame_3">
      <property name="geometry">
       <rect>
-       <x>970</x>
+       <x>1290</x>
        <y>10</y>
-       <width>480</width>
-       <height>270</height>
+       <width>640</width>
+       <height>360</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -332,7 +332,7 @@
       </property>
       <property name="font">
        <font>
-        <pointsize>16</pointsize>
+        <pointsize>18</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -346,7 +346,7 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>240</y>
+        <y>330</y>
         <width>111</width>
         <height>22</height>
        </rect>
@@ -367,10 +367,10 @@
     <widget class="QFrame" name="frame_6">
      <property name="geometry">
       <rect>
-       <x>490</x>
-       <y>280</y>
-       <width>480</width>
-       <height>270</height>
+       <x>650</x>
+       <y>370</y>
+       <width>640</width>
+       <height>360</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -396,7 +396,7 @@
       </property>
       <property name="font">
        <font>
-        <pointsize>16</pointsize>
+        <pointsize>18</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -410,7 +410,7 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>240</y>
+        <y>330</y>
         <width>111</width>
         <height>22</height>
        </rect>
@@ -431,10 +431,10 @@
     <widget class="QFrame" name="frame_7">
      <property name="geometry">
       <rect>
-       <x>970</x>
-       <y>280</y>
-       <width>480</width>
-       <height>270</height>
+       <x>1290</x>
+       <y>370</y>
+       <width>640</width>
+       <height>360</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -460,7 +460,7 @@
       </property>
       <property name="font">
        <font>
-        <pointsize>16</pointsize>
+        <pointsize>18</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -474,7 +474,7 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>240</y>
+        <y>330</y>
         <width>111</width>
         <height>22</height>
        </rect>
@@ -495,10 +495,10 @@
     <widget class="QFrame" name="frame_8">
      <property name="geometry">
       <rect>
-       <x>1450</x>
-       <y>280</y>
-       <width>480</width>
-       <height>270</height>
+       <x>1930</x>
+       <y>370</y>
+       <width>640</width>
+       <height>360</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -524,7 +524,7 @@
       </property>
       <property name="font">
        <font>
-        <pointsize>16</pointsize>
+        <pointsize>18</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -538,7 +538,7 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>240</y>
+        <y>330</y>
         <width>111</width>
         <height>22</height>
        </rect>
@@ -560,9 +560,9 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>550</y>
-       <width>480</width>
-       <height>270</height>
+       <y>730</y>
+       <width>640</width>
+       <height>360</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -588,7 +588,7 @@
       </property>
       <property name="font">
        <font>
-        <pointsize>16</pointsize>
+        <pointsize>18</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -602,7 +602,7 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>240</y>
+        <y>330</y>
         <width>111</width>
         <height>22</height>
        </rect>
@@ -623,10 +623,10 @@
     <widget class="QFrame" name="frame_10">
      <property name="geometry">
       <rect>
-       <x>490</x>
-       <y>550</y>
-       <width>480</width>
-       <height>270</height>
+       <x>650</x>
+       <y>730</y>
+       <width>640</width>
+       <height>360</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -652,7 +652,7 @@
       </property>
       <property name="font">
        <font>
-        <pointsize>16</pointsize>
+        <pointsize>18</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -666,7 +666,7 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>240</y>
+        <y>330</y>
         <width>111</width>
         <height>22</height>
        </rect>
@@ -687,10 +687,10 @@
     <widget class="QFrame" name="frame_11">
      <property name="geometry">
       <rect>
-       <x>970</x>
-       <y>550</y>
-       <width>480</width>
-       <height>270</height>
+       <x>1290</x>
+       <y>730</y>
+       <width>640</width>
+       <height>360</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -716,7 +716,7 @@
       </property>
       <property name="font">
        <font>
-        <pointsize>16</pointsize>
+        <pointsize>18</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -730,7 +730,7 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>240</y>
+        <y>330</y>
         <width>111</width>
         <height>22</height>
        </rect>
@@ -751,10 +751,10 @@
     <widget class="QFrame" name="frame_12">
      <property name="geometry">
       <rect>
-       <x>1450</x>
-       <y>550</y>
-       <width>480</width>
-       <height>270</height>
+       <x>1930</x>
+       <y>730</y>
+       <width>640</width>
+       <height>360</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -780,7 +780,7 @@
       </property>
       <property name="font">
        <font>
-        <pointsize>16</pointsize>
+        <pointsize>18</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -794,7 +794,7 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>240</y>
+        <y>330</y>
         <width>111</width>
         <height>22</height>
        </rect>
@@ -816,9 +816,9 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>820</y>
-       <width>480</width>
-       <height>270</height>
+       <y>1090</y>
+       <width>640</width>
+       <height>360</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -844,7 +844,7 @@
       </property>
       <property name="font">
        <font>
-        <pointsize>16</pointsize>
+        <pointsize>18</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -858,7 +858,7 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>240</y>
+        <y>330</y>
         <width>111</width>
         <height>22</height>
        </rect>
@@ -879,10 +879,10 @@
     <widget class="QFrame" name="frame_14">
      <property name="geometry">
       <rect>
-       <x>490</x>
-       <y>820</y>
-       <width>480</width>
-       <height>270</height>
+       <x>650</x>
+       <y>1090</y>
+       <width>640</width>
+       <height>360</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -908,7 +908,7 @@
       </property>
       <property name="font">
        <font>
-        <pointsize>16</pointsize>
+        <pointsize>18</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -922,7 +922,7 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>240</y>
+        <y>330</y>
         <width>111</width>
         <height>22</height>
        </rect>
@@ -943,10 +943,10 @@
     <widget class="QFrame" name="frame_15">
      <property name="geometry">
       <rect>
-       <x>970</x>
-       <y>820</y>
-       <width>480</width>
-       <height>270</height>
+       <x>1290</x>
+       <y>1090</y>
+       <width>640</width>
+       <height>360</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -972,7 +972,7 @@
       </property>
       <property name="font">
        <font>
-        <pointsize>16</pointsize>
+        <pointsize>18</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -986,7 +986,7 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>240</y>
+        <y>330</y>
         <width>111</width>
         <height>22</height>
        </rect>
@@ -1007,10 +1007,10 @@
     <widget class="QFrame" name="frame_16">
      <property name="geometry">
       <rect>
-       <x>1450</x>
-       <y>820</y>
-       <width>480</width>
-       <height>270</height>
+       <x>1930</x>
+       <y>1090</y>
+       <width>640</width>
+       <height>360</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -1036,7 +1036,7 @@
       </property>
       <property name="font">
        <font>
-        <pointsize>16</pointsize>
+        <pointsize>18</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -1050,7 +1050,7 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>240</y>
+        <y>330</y>
         <width>111</width>
         <height>22</height>
        </rect>
@@ -1074,8 +1074,8 @@
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>121</width>
-      <height>101</height>
+      <width>141</width>
+      <height>111</height>
      </rect>
     </property>
     <property name="text">
@@ -1091,17 +1091,22 @@
    <widget class="QLabel" name="logo_name">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>20</y>
-      <width>201</width>
-      <height>51</height>
+      <x>150</x>
+      <y>30</y>
+      <width>221</width>
+      <height>41</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>24</pointsize>
+     </font>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(171, 141, 21);</string>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;Malenia VMS&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>Malenia VMS</string>
     </property>
    </widget>
    <widget class="QWidget" name="widget" native="true">
@@ -1109,7 +1114,7 @@
      <rect>
       <x>410</x>
       <y>10</y>
-      <width>1841</width>
+      <width>2480</width>
       <height>91</height>
      </rect>
     </property>
@@ -1119,15 +1124,15 @@
     <widget class="QPushButton" name="connectButton">
      <property name="geometry">
       <rect>
-       <x>1670</x>
+       <x>2300</x>
        <y>10</y>
-       <width>161</width>
+       <width>171</width>
        <height>71</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <pointsize>24</pointsize>
+       <pointsize>26</pointsize>
       </font>
      </property>
      <property name="styleSheet">
@@ -1141,7 +1146,7 @@ color: rgb(45, 45, 45);</string>
     <widget class="QLineEdit" name="ipInput">
      <property name="geometry">
       <rect>
-       <x>350</x>
+       <x>370</x>
        <y>10</y>
        <width>211</width>
        <height>31</height>
@@ -1149,7 +1154,7 @@ color: rgb(45, 45, 45);</string>
      </property>
      <property name="font">
       <font>
-       <pointsize>12</pointsize>
+       <pointsize>14</pointsize>
       </font>
      </property>
      <property name="styleSheet">
@@ -1162,13 +1167,13 @@ color: rgb(212, 212, 212);</string>
       <rect>
        <x>30</x>
        <y>40</y>
-       <width>131</width>
+       <width>141</width>
        <height>35</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <pointsize>12</pointsize>
+       <pointsize>14</pointsize>
       </font>
      </property>
      <property name="styleSheet">
@@ -1200,7 +1205,7 @@ color: rgb(234, 234, 234);
     <widget class="QLabel" name="label_4">
      <property name="geometry">
       <rect>
-       <x>290</x>
+       <x>300</x>
        <y>50</y>
        <width>91</width>
        <height>21</height>
@@ -1208,7 +1213,7 @@ color: rgb(234, 234, 234);
      </property>
      <property name="font">
       <font>
-       <pointsize>12</pointsize>
+       <pointsize>14</pointsize>
       </font>
      </property>
      <property name="styleSheet">
@@ -1221,7 +1226,7 @@ color: rgb(234, 234, 234);
     <widget class="QLabel" name="label_5">
      <property name="geometry">
       <rect>
-       <x>180</x>
+       <x>190</x>
        <y>10</y>
        <width>91</width>
        <height>21</height>
@@ -1229,7 +1234,7 @@ color: rgb(234, 234, 234);
      </property>
      <property name="font">
       <font>
-       <pointsize>12</pointsize>
+       <pointsize>14</pointsize>
       </font>
      </property>
      <property name="styleSheet">
@@ -1250,7 +1255,7 @@ color: rgb(234, 234, 234);
      </property>
      <property name="font">
       <font>
-       <pointsize>12</pointsize>
+       <pointsize>14</pointsize>
       </font>
      </property>
      <property name="styleSheet">
@@ -1265,13 +1270,13 @@ color: rgb(234, 234, 234);
       <rect>
        <x>630</x>
        <y>10</y>
-       <width>91</width>
+       <width>111</width>
        <height>21</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <pointsize>12</pointsize>
+       <pointsize>14</pointsize>
       </font>
      </property>
      <property name="styleSheet">
@@ -1284,7 +1289,7 @@ color: rgb(234, 234, 234);
     <widget class="QComboBox" name="connTypeComboBox">
      <property name="geometry">
       <rect>
-       <x>180</x>
+       <x>190</x>
        <y>40</y>
        <width>81</width>
        <height>35</height>
@@ -1292,7 +1297,7 @@ color: rgb(234, 234, 234);
      </property>
      <property name="font">
       <font>
-       <pointsize>12</pointsize>
+       <pointsize>14</pointsize>
       </font>
      </property>
      <property name="styleSheet">
@@ -1318,7 +1323,7 @@ color: rgb(234, 234, 234);</string>
     <widget class="QLabel" name="label_3">
      <property name="geometry">
       <rect>
-       <x>290</x>
+       <x>300</x>
        <y>10</y>
        <width>51</width>
        <height>21</height>
@@ -1326,7 +1331,7 @@ color: rgb(234, 234, 234);</string>
      </property>
      <property name="font">
       <font>
-       <pointsize>12</pointsize>
+       <pointsize>14</pointsize>
       </font>
      </property>
      <property name="styleSheet">
@@ -1339,7 +1344,7 @@ color: rgb(234, 234, 234);</string>
     <widget class="QLineEdit" name="portInput">
      <property name="geometry">
       <rect>
-       <x>350</x>
+       <x>370</x>
        <y>50</y>
        <width>81</width>
        <height>31</height>
@@ -1347,7 +1352,7 @@ color: rgb(234, 234, 234);</string>
      </property>
      <property name="font">
       <font>
-       <pointsize>12</pointsize>
+       <pointsize>14</pointsize>
       </font>
      </property>
      <property name="styleSheet">
@@ -1358,15 +1363,15 @@ color: rgb(212, 212, 212);</string>
     <widget class="QLineEdit" name="usernameInput">
      <property name="geometry">
       <rect>
-       <x>730</x>
+       <x>740</x>
        <y>10</y>
-       <width>131</width>
+       <width>141</width>
        <height>31</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <pointsize>12</pointsize>
+       <pointsize>14</pointsize>
       </font>
      </property>
      <property name="styleSheet">
@@ -1382,13 +1387,13 @@ color: rgb(234, 234, 234);</string>
       <rect>
        <x>630</x>
        <y>50</y>
-       <width>91</width>
+       <width>111</width>
        <height>21</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <pointsize>12</pointsize>
+       <pointsize>14</pointsize>
       </font>
      </property>
      <property name="styleSheet">
@@ -1401,15 +1406,15 @@ color: rgb(234, 234, 234);</string>
     <widget class="QLineEdit" name="passwordInput">
      <property name="geometry">
       <rect>
-       <x>730</x>
+       <x>740</x>
        <y>50</y>
-       <width>131</width>
+       <width>141</width>
        <height>31</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <pointsize>12</pointsize>
+       <pointsize>14</pointsize>
       </font>
      </property>
      <property name="styleSheet">
@@ -1420,7 +1425,7 @@ color: rgb(234, 234, 234);</string>
     <widget class="QLabel" name="label_7">
      <property name="geometry">
       <rect>
-       <x>1550</x>
+       <x>2190</x>
        <y>10</y>
        <width>91</width>
        <height>21</height>
@@ -1428,7 +1433,7 @@ color: rgb(234, 234, 234);</string>
      </property>
      <property name="font">
       <font>
-       <pointsize>12</pointsize>
+       <pointsize>14</pointsize>
       </font>
      </property>
      <property name="styleSheet">
@@ -1441,7 +1446,7 @@ color: rgb(234, 234, 234);</string>
     <widget class="QComboBox" name="layoutComboBox">
      <property name="geometry">
       <rect>
-       <x>1550</x>
+       <x>2190</x>
        <y>40</y>
        <width>71</width>
        <height>35</height>
@@ -1449,7 +1454,7 @@ color: rgb(234, 234, 234);</string>
      </property>
      <property name="font">
       <font>
-       <pointsize>12</pointsize>
+       <pointsize>14</pointsize>
       </font>
      </property>
      <property name="styleSheet">
@@ -1475,15 +1480,15 @@ color: rgb(234, 234, 234);</string>
     <widget class="QPushButton" name="autocompletePasswordButton">
      <property name="geometry">
       <rect>
-       <x>880</x>
+       <x>890</x>
        <y>10</y>
-       <width>191</width>
+       <width>201</width>
        <height>71</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <pointsize>16</pointsize>
+       <pointsize>18</pointsize>
       </font>
      </property>
      <property name="styleSheet">
@@ -1502,7 +1507,7 @@ PASSWORD</string>
       <x>10</x>
       <y>130</y>
       <width>291</width>
-      <height>1101</height>
+      <height>1460</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -1512,19 +1517,18 @@ PASSWORD</string>
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>40</y>
+       <y>50</y>
        <width>271</width>
-       <height>1051</height>
+       <height>1401</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <pointsize>12</pointsize>
+       <pointsize>14</pointsize>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(74, 74, 74);
-QTreeWidgetItem{ color: rgb(234, 234, 234);}</string>
+      <string notr="true">background-color: rgb(74, 74, 74);</string>
      </property>
      <column>
       <property name="text">
@@ -1532,7 +1536,7 @@ QTreeWidgetItem{ color: rgb(234, 234, 234);}</string>
       </property>
       <property name="font">
        <font>
-        <pointsize>12</pointsize>
+        <pointsize>14</pointsize>
        </font>
       </property>
       <property name="background">
@@ -1558,7 +1562,7 @@ QTreeWidgetItem{ color: rgb(234, 234, 234);}</string>
       </property>
       <property name="font">
        <font>
-        <pointsize>12</pointsize>
+        <pointsize>14</pointsize>
        </font>
       </property>
       <property name="background">
@@ -1584,13 +1588,13 @@ QTreeWidgetItem{ color: rgb(234, 234, 234);}</string>
       <rect>
        <x>10</x>
        <y>10</y>
-       <width>121</width>
+       <width>141</width>
        <height>21</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <pointsize>12</pointsize>
+       <pointsize>14</pointsize>
       </font>
      </property>
      <property name="styleSheet">

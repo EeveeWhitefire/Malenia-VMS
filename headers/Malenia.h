@@ -48,6 +48,7 @@ private slots:
 protected slots:
     void mouseDoubleClickEvent(QMouseEvent*) override;
     void mousePressEvent(QMouseEvent*) override;
+    void resizeEvent(QResizeEvent* e) override;
 private:
     Ui::MaleniaWindow ui;
     LiveViewPrompt* _liveViewPrompt = NULL;

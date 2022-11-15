@@ -185,7 +185,7 @@ namespace Dahua
                     MaleniaException::show(ERR_NETWORK_ERROR, "Failed to get connection session information");
                     break;
                 default:
-                    MaleniaException::show(ERR_UNKNOWN, std::to_string(CLIENT_GetLastError()).c_str());
+                    MaleniaException::show(ERR_UNKNOWN, std::to_string(CLIENT_GetLastError() - 0x80000000).c_str());
                     break;
             }
 
@@ -263,7 +263,7 @@ namespace Dahua
                     MaleniaException::show(ERR_PLAYBACK_NOT_EXIST);
                     break;
                 default:
-                    QMessageBox::information(NULL, QObject::tr("CLIENT_PlayBackByTimeEx2 error"), QObject::tr("error code : %1").arg(CLIENT_GetLastError() - 0x80000000));
+                    MaleniaException::show(ERR_UNKNOWN, std::to_string(CLIENT_GetLastError() - 0x80000000).c_str());
                     break;
             }
             return 0;
