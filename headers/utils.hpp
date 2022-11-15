@@ -417,12 +417,22 @@ inline datetime calc_datetime_difference(datetime original, datetime offset)
         result.minutes -= 1;
         result.seconds += 60;
     }
+    else if(result.seconds >= 60)
+    {
+        result.minutes += 1;
+        result.seconds -= 60;
+    }
 
     result.minutes -= offset.minutes;
     if(result.minutes < 0)
     {
         result.hours -= 1;
         result.minutes += 60;
+    }
+    else if(result.minutes >= 60)
+    {
+        result.hours += 1;
+        result.minutes -= 60;
     }
 
     result.hours -= offset.hours;
@@ -431,19 +441,34 @@ inline datetime calc_datetime_difference(datetime original, datetime offset)
         result.day -= 1;
         result.hours += 24;
     }
+    else if(result.hours >= 24)
+    {
+        result.day += 1;
+        result.hours -= 24;
+    }
 
     result.day -= offset.day;
-    if(result.day < 0)
+    if(result.day <= 0)
     {
         result.month -= 1;
         result.day += 30;
     }
+    else if(result.day > 30)
+    {
+        result.month += 1;
+        result.day -= 30;
+    }
 
     result.month -= offset.month;
-    if(result.month < 0)
+    if(result.month <= 0)
     {
         result.year -= 1;
         result.month += 12;
+    }
+    else if(result.month > 12)
+    {
+        result.year += 1;
+        result.month -= 12;
     }
 
     result.year -= offset.year;
