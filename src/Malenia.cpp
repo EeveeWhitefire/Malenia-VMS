@@ -361,13 +361,6 @@ void Malenia::mousePressEvent(QMouseEvent* e)
     QMainWindow::mousePressEvent(e);
 }
 
-void Malenia::resizeEvent(QResizeEvent* e)
-{
-    qDebug("%d %d", e->size().width(), e->size().height());
-
-    QMainWindow::resizeEvent(e);
-}
-
 void Malenia::launchLiveView()
 {
     if(IStream* liveStream = this->_selectedChannel->getLiveStream(); liveStream != NULL) // if this channel is already playing live stream at some other frame
