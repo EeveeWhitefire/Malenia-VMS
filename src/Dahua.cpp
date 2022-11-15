@@ -106,8 +106,8 @@ namespace Dahua
         now = time(0);
         ltm = localtime(&now);
         if(CLIENT_GetDevConfig(this->_userId, DH_DEV_TIMECFG, NULL, &datetimeRequestOut, sizeof(NET_TIME), &nRetLen)) // getting time setting of device
-                this->_dtOffset = calcDatetimeOffset(ltm, datetimeRequestOut.dwYear, datetimeRequestOut.dwMonth, datetimeRequestOut.dwDay, 
-                                                     datetimeRequestOut.dwHour, datetimeRequestOut.dwMinute, datetimeRequestOut.dwSecond);
+                this->_dtOffset = calc_datetime_offset(ltm, datetimeRequestOut.dwYear, datetimeRequestOut.dwMonth, datetimeRequestOut.dwDay, 
+                                                       datetimeRequestOut.dwHour, datetimeRequestOut.dwMinute, datetimeRequestOut.dwSecond);
 
         channelsRequestIn.stuVideoIn.dwSize = sizeof(channelsRequestIn.stuVideoIn);
         channelsRequestIn.stuVideoOut.dwSize = sizeof(channelsRequestIn.stuVideoOut);
@@ -148,7 +148,10 @@ namespace Dahua
 
     IStream* SDK_Channel::StartPlayback(datetime from, datetime to, QFrame* qframe)
     {
-        return this->StartStream(new SDK_PlaybackStream(this->_userId, this->_chid, from, to, this), qframe);
+        return this->StartStream(new SDK_PlaybackStream(this->_userId, this->_chid, 
+                                                        calc_datetime_difference(from, this->_dtOffset),
+                                                        calc_datetime_difference(to, this->_dtOffset),
+                                                        this), qframe);
     }
 
     SDK_LiveStream::SDK_LiveStream(LLONG userId, int chid, IChannel* channel, QWidget* parent) : IStream(channel, parent)
@@ -213,19 +216,19 @@ namespace Dahua
         memset(&playbackRequestInFrom, 0, sizeof(NET_TIME));
         memset(&playbackRequestInTo, 0, sizeof(NET_TIME));
 
-        playbackRequestInFrom.dwYear = this->_from.year - this->_dtOffset.year;
-        playbackRequestInFrom.dwMonth = this->_from.month - this->_dtOffset.month;
-        playbackRequestInFrom.dwDay = this->_from.day - this->_dtOffset.day;
-        playbackRequestInFrom.dwHour = this->_from.hours - this->_dtOffset.hours;
-        playbackRequestInFrom.dwMinute = this->_from.minutes - this->_dtOffset.minutes;
-        playbackRequestInFrom.dwSecond = this->_from.seconds - this->_dtOffset.seconds;
+        playbackRequestInFrom.dwYear = this->_from.year;
+        playbackRequestInFrom.dwMonth = this->_from.month;
+        playbackRequestInFrom.dwDay = this->_from.day;
+        playbackRequestInFrom.dwHour = this->_from.hours;
+        playbackRequestInFrom.dwMinute = this->_from.minutes;
+        playbackRequestInFrom.dwSecond = this->_from.seconds;
 
-        playbackRequestInTo.dwYear = this->_to.year - this->_dtOffset.year;
-        playbackRequestInTo.dwMonth = this->_to.month - this->_dtOffset.month;
-        playbackRequestInTo.dwDay = this->_to.day - this->_dtOffset.day;
-        playbackRequestInTo.dwHour = this->_to.hours - this->_dtOffset.hours;
-        playbackRequestInTo.dwMinute = this->_to.minutes - this->_dtOffset.minutes;
-        playbackRequestInTo.dwSecond = this->_to.seconds - this->_dtOffset.seconds;
+        playbackRequestInTo.dwYear = this->_to.year;
+        playbackRequestInTo.dwMonth = this->_to.month;
+        playbackRequestInTo.dwDay = this->_to.day;
+        playbackRequestInTo.dwHour = this->_to.hours;
+        playbackRequestInTo.dwMinute = this->_to.minutes;
+        playbackRequestInTo.dwSecond = this->_to.seconds;
 
         PLAY_GetFreePort(&this->_streamingPort);
         PLAY_OpenStream(this->_streamingPort, NULL, 0, 900*1024);

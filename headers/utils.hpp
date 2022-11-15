@@ -327,7 +327,7 @@ typedef struct datetime
     int seconds = 0;
 } datetime;
 
-inline datetime calcDatetimeOffset(tm* localDt, int nvrYear, int nvrMonth, int nvrDay, int nvrHours, int nvrMinutes, int nvrSeconds)
+inline datetime calc_datetime_offset(tm* localDt, int nvrYear, int nvrMonth, int nvrDay, int nvrHours, int nvrMinutes, int nvrSeconds)
 {
     datetime offset;
     offset.year = (localDt->tm_year + 1900) - nvrYear;
@@ -398,7 +398,7 @@ inline void trim(std::string& s)
     ltrim(s);
 }
 
-inline datetime calc_datetime_offset(datetime original, datetime offset)
+inline datetime calc_datetime_difference(datetime original, datetime offset)
 {
     datetime result;
     result.year = original.year;

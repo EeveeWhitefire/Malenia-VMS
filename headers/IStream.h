@@ -26,7 +26,6 @@ class IStream : public QWidget
     protected:
         QFrame* _lastFrame = NULL;
         IChannel* _channel = NULL;
-        datetime _dtOffset = {0};
         int _isPlaying = 0;
 };
 

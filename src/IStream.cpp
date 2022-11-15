@@ -3,7 +3,6 @@
 IStream::IStream(IChannel* channel, QWidget* parent) : QWidget(parent)
 {
     this->_channel = channel;
-    this->_dtOffset = channel->getDatetimeOffset();
 }
 
 IStream::~IStream()
